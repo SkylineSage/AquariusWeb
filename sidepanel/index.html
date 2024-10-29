@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+  <h1>Welcome to Aquarius AI!</h1>
+    <div class="input-container">
+      <input
+        type="password"
+        id="api-key"
+        class="apiKey"
+        value="AIzaSyAmagiPGR0yF67H26_jiuNvArvWneTRo70"
+        placeholder="your-api-key-here"
+      />
+      <button id="toggle-key-visibility" for="api-key">show api key</button>
+    </div>
+    <label for="input-prompt"></label><textarea
+      id="input-prompt"
+      placeholder='Type something ...'
+      cols="30"
+      rows="5"
+    ></textarea>
+    <div id="options">
+      <button class="option" data-value="Write a haiku">Write a haiku</button>
+      <button class="option" data-value="Explain JavaScript">Explain JavaScript</button>
+      <button class="option" data-value="Generate a random number">Generate a random number</button>
+      <button class="option" data-value="Create a to-do list">Create a to-do list</button>
+    </div>
+    <div>
+      <input
+        type="range"
+        id="temperature"
+        name="temperature"
+        min="0"
+        max="2"
+        step="0.01"
+        value="1"
+      />
+      <label for="temperature"
+        >Temperature: <span id="label-temperature">1</span></label
+      >
+    </div>
+    <button id="button-prompt" class="primary" disabled>Run</button>
+    <div id="response" class="text" hidden></div>
+    <div id="loading" class="text" hidden><span class="blink">...</span></div>
+    <div id="error" class="text" hidden></div>
+    <script src="../scripts/sidepanel.bundle.js" type="module"></script>
+  </body>
+</html>
